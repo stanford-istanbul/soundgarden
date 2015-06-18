@@ -1,0 +1,33 @@
+<head>
+  <title>my_cool_app</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+
+    <div class="container">
+    <header>
+      <h1>Todo List</h1>
+    </header>
+
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+        
+  </div>
+</body>
+
+
+
+<template name="task">
+    <button class="delete">&times;</button>
+  <li>{{text}}</li>
+</template>
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
