@@ -1,3 +1,3 @@
 function playNote(value) {
-    $.post( "http://music-cannon.meteor.com/music", { note: value, name: 'bryce' } );
+    $.post( "http://localhost:3000/message", { message: value, name: 'bryce' } );
 } 

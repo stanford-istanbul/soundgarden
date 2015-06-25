@@ -19,7 +19,7 @@ if (Meteor.isClient) {
   });
 
   Template.task.onRendered(function () {
-     playSound(this.data.text);
+     //playSound(this.data.text);
    });
     
   Router.route('/', function () {
@@ -31,9 +31,9 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
       
-      Router.route('/music', {where: 'server'}).post(function(){
+      Router.route('/message', {where: 'server'}).post(function(){
 		        Tasks.insert({
-      			    text: this.request.body.note,
+      			    text: this.request.body.message,
       			    date: new Date(), // current time
                     name: this.request.body.name,
                     ip: this.request.connection.remoteAddress

@@ -1,14 +1,14 @@
 <head>
-  <title>Music Cannon</title>
+  <title>Bogazici Messenger</title>
 </head>
 
 <body>
-  <h1>Music Cannon Server!</h1>
-    <h2>Push a note to the /music route on this server server and listen carefully!</h2>
+  <h1>This is the server Server!</h1>
+    <h3>Push a message to the server and watch what happens...!</h3>
 
     <div class="container">
     <header>
-      <h1>Notes Played</h1>
+      <h1>Chats:</h1>
     </header>
 
     <ul>
@@ -23,6 +23,6 @@
 
 
 <template name="task">
-  <li>{{#if name}}{{name}}{{else}}{{ip}}{{/if}} pushed the note {{text}}</li>
+  <li>{{#if name}}{{name}}{{else}}{{ip}}{{/if}} says {{text}}</li>
 </template>
 
