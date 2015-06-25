@@ -1,8 +1,3 @@
-
-$(document).ready(function(){
-    function playSound(note) {
-        var audio = new Audio('sounds/'+note+'.wav');
-        audio.play();
-    }
-
-});
+function playNote(value) {
+    $.post( "http://localhost:3000/music", { note: value } );
+} 
