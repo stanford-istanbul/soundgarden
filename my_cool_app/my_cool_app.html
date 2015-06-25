@@ -22,6 +22,6 @@
 
 
 <template name="task">
-  <li>{{text}}</li>
+  <li>{{#if name}}{{name}} pushed the note {{/if}}{{text}}</li>
 </template>
 

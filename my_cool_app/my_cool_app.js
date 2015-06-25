@@ -17,16 +17,14 @@ if (Meteor.isClient) {
     },
 
   });
-    Template.task.events({
-  "click .delete": function () {
-      //Tasks.remove({});
-  }
-});
-    Template.task.onRendered(function () {
-        console.log('party');
-        console.log(this.data.text);
-  playSound(this.data.text);
-});
+
+  Template.task.onRendered(function () {
+     playSound(this.data.text);
+   });
+    
+  Router.route('/', function () {
+     this.render(Template);
+  });
   
 }
 
@@ -36,7 +34,8 @@ if (Meteor.isServer) {
       Router.route('/music', {where: 'server'}).post(function(){
 		        Tasks.insert({
       			    text: this.request.body.note,
-      			    createdAt: new Date() // current time
+      			    date: new Date(), // current time
+                    name: this.request.body.name
     		    });
           this.response.end('done'+this.request.body.note+'\n');
             // update Item Function
