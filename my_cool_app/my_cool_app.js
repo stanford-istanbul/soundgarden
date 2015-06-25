@@ -41,6 +41,7 @@ if (Meteor.isServer) {
           this.response.end('done'+this.request.body.note+'\n');
             // update Item Function
       });
+
       
       Router.route('/removeAll', {where: 'server'}).post(function(){
           console.log('removing all entries');
