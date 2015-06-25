@@ -1,13 +1,14 @@
 <head>
-  <title>my_cool_app</title>
+  <title>Music Cannon</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Music Cannon Server!</h1>
+    <h2>Push a note to the /music route on this server server and listen carefully!</h2>
 
     <div class="container">
     <header>
-      <h1>Todo List</h1>
+      <h1>Notes Played</h1>
     </header>
 
     <ul>
@@ -22,6 +23,6 @@
 
 
 <template name="task">
-  <li>{{#if name}}{{name}} pushed the note {{/if}}{{text}}</li>
+  <li>{{#if name}}{{name}}{{else}}{{ip}}{{/if}} pushed the note {{text}}</li>
 </template>
 

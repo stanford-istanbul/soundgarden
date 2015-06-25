@@ -35,7 +35,8 @@ if (Meteor.isServer) {
 		        Tasks.insert({
       			    text: this.request.body.note,
       			    date: new Date(), // current time
-                    name: this.request.body.name
+                    name: this.request.body.name,
+                    ip: this.request.connection.remoteAddress
     		    });
           this.response.end('done'+this.request.body.note+'\n');
             // update Item Function
