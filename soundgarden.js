@@ -1,3 +1,2 @@
-function playNote(value) {
-    $.post( "http://music-cannon.meteor.com/music", { note: value, name: 'bryce' } );
-} 
+// create your callback function here! Remember to give it a parameter to pass to the push method
+// and look at the handout on the website for information on how to write this
